@@ -39,7 +39,7 @@ const Page = () => {
     todo.length > 0 ? (
       todo.map((t, i) => (
         <li key={i} className="flex items-center justify-between  bg-white rounded-md  px-4 my-2">
-          <div className="mb-4 px-4 py-2 flex flex-col justify-between w-2/3">
+          <div className="mb-4 px-4 py- flex flex-col justify-between w-2/3">
             <h2 className="text-1xl font-bold">{t.title}</h2>
             <p>{t.desc}</p>
           </div>
@@ -48,7 +48,7 @@ const Page = () => {
         </li>
       ))
     ) : (
-      <h2>NO TASK AVAILABLE</h2>
+      <h2 className="text-3xl bg-cyan-300">NO TASK AVAILABLE</h2>
     );
 
   return (
@@ -69,7 +69,7 @@ const Page = () => {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter your to-do task"
+          placeholder="Enter your Task Title"
           className="text-3xl border-red-600 border-2 m-8 px-4 py-2"
         />
         <input
@@ -77,16 +77,16 @@ const Page = () => {
           type="text"
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
-          placeholder="Enter your description"
+          placeholder="Enter your Task Description"
           className="text-3xl border-red-600 border-2 m-8 px-4 py-2"
         />
         <button type="submit"
-          className="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-center mt-5 border-2 border-white p-2 rounded-md"
+          className=" ml-8 text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-center mt-5 border-2 border-white p-2 rounded-md"
         >Add Task</button>
       </form>
-      <hr />
-      <div className="p-2 bg-slate-400  rounded-md">
-        <ul className="text-3xl">{RenderTask}</ul>
+      
+      <div className="mt-8 p-2 rounded-md h-[700px] overflow-x-auto bg-blend-lighten hover:bg-blend-darken">
+        <ul className="text-3xl ">{RenderTask}</ul>
 
       </div>
     </div>
@@ -94,3 +94,6 @@ const Page = () => {
 };
 
 export default Page;
+
+
+
