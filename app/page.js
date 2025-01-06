@@ -53,7 +53,7 @@ const Page = () => {
 
   return (
     <div className="w-[80%] mx-auto">
-      <h1 className="text-6xl font-bold text-center mt-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">NEXT-JS_TO-DO_ LIST</h1>
+      <h1 className="text-7xl font-bold text-center mt-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">NEXT-JS_TO-DO_ LIST</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
